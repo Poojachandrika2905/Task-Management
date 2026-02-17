@@ -55,7 +55,7 @@ setErrors({});
 try{
 
 const res = await axios.post(
-"https://task-management-zj4r.onrender.com",
+"https://task-management-zj4r.onrender.com/api/auth/register",
 {name,email,password}
 );
 
