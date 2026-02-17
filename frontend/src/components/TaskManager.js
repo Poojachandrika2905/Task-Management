@@ -23,7 +23,7 @@ const fetchTasks = async () => {
 try {
 
 const res = await axios.get(
-"http://localhost:5000/api/tasks",
+"https://task-management-zj4r.onrender.com/api/tasks",
 { headers }
 );
 
@@ -31,7 +31,7 @@ setTasks(res.data);
 
 }
 catch(err){
-console.log(err);
+console.log("Fetch error:", err);
 }
 };
 
@@ -44,7 +44,7 @@ if (!title.trim()) return;
 try {
 
 await axios.post(
-"http://localhost:5000/api/tasks",
+"https://task-management-zj4r.onrender.com/api/tasks",
 { title },
 { headers }
 );
@@ -57,7 +57,7 @@ if(refreshStats) refreshStats();
 
 }
 catch(err){
-console.log(err);
+console.log("Add error:", err);
 }
 
 };
@@ -69,7 +69,7 @@ const deleteTask = async (id) => {
 try {
 
 await axios.delete(
-"http://localhost:5000/api/tasks/" + id,
+"https://task-management-zj4r.onrender.com/api/tasks/" + id,
 { headers }
 );
 
@@ -79,7 +79,7 @@ if(refreshStats) refreshStats();
 
 }
 catch(err){
-console.log(err);
+console.log("Delete error:", err);
 }
 
 };
@@ -91,7 +91,7 @@ const completeTask = async (task) => {
 try {
 
 await axios.put(
-"http://localhost:5000/api/tasks/" + task._id,
+"https://task-management-zj4r.onrender.com/api/tasks/" + task._id,
 {
 status: task.status === "completed"
 ? "pending"
@@ -106,7 +106,7 @@ if(refreshStats) refreshStats();
 
 }
 catch(err){
-console.log(err);
+console.log("Update error:", err);
 }
 
 };
