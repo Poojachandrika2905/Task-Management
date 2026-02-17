@@ -48,7 +48,7 @@ const updateProfile = async()=>{
 try{
 
 const res = await axios.put(
-"http://localhost:5000/api/auth/profile",
+"https://task-management-zj4r.onrender.com/api/auth/profile",
 {
 name,
 email
