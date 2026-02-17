@@ -26,7 +26,7 @@ const fetchProfile = async()=>{
 try{
 
 const res = await axios.get(
-"https://task-management-zj4r.onrender.com",
+"https://task-management-zj4r.onrender.com/api/auth/profile",
 {headers}
 );
 
