@@ -23,8 +23,8 @@ const fetchUser = async()=>{
 try{
 
 const res = await axios.get(
-"http://localhost:5000/api/auth/profile",
-{headers}
+"https://task-management-zj4r.onrender.com/api/auth/profile",
+{ headers }
 );
 
 setUser(res.data);
